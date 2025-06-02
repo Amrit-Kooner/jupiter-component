@@ -282,7 +282,7 @@ button {
 
 .numbers-slide-content .slide-content-desc {
   margin-top: 5rem;
-  max-width: 35%;
+  max-width: 37%;
   color: var(--white);
 }
 
@@ -294,7 +294,7 @@ button {
 
 .numbers-slide-content .slide-desc-text {
   font-family: "Noto Serif";
-  font-weight: 500;
+  font-weight: 400;
   font-size: 3.5rem;
 }
 
