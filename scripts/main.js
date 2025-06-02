@@ -3,10 +3,10 @@ const leftBtn = document.querySelector(".left-arrow-btn");
 const rightBtnIcon = document.querySelector(".right-arrow-icon");
 const leftBtnIcon = document.querySelector(".left-arrow-icon");
 
-const rightBlue = "../assets/svg/right-arrow-blue.svg";
-const rightDefault = "../assets/svg/right-arrow-white.svg"; 
-const leftBlue = "../assets/svg/left-arrow-blue.svg";
-const leftDefault = "../assets/svg/left-arrow-white.svg"; 
+const rightBlue = "/assets/svg/right-arrow-blue.svg";
+const rightDefault = "/assets/svg/right-arrow-white.svg"; 
+const leftBlue = "/assets/svg/left-arrow-blue.svg";
+const leftDefault = "/assets/svg/left-arrow-white.svg"; 
 
 // changes icon colour when button is hovered or not.
 // only used for left and right arrows.
