@@ -1,0 +1,341 @@
+/* Figtree Font Family */
+@font-face {
+  font-family: 'Figtree';
+  src: url('../assets/fonts/Figtree/Figtree-Light.ttf') format('truetype');
+  font-weight: 300; 
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Figtree';
+  src: url('../assets/fonts/Figtree/Figtree-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Figtree';
+  src: url('../assets/fonts/Figtree/Figtree-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Noto Serif Font Family */
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('../assets/fonts/Noto Serif/NotoSerif-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('../assets/fonts/Noto Serif/NotoSerif-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('../assets/fonts/Noto Serif/NotoSerif-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('../assets/fonts/Noto Serif/NotoSerif-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+:root {
+  --act-box-size: 15.5rem;
+  --act-box-selected-size: 0.6rem;
+  --bg-towers-icon-width: 40%;
+
+  --blue-300: #4291bf;
+  --blue-400: #459aca;
+  --blue-500: #2b7dad;
+  --blue-600: #204269;
+  --blue-700: #152c48;
+  --blue-800: #152c48;
+  --white: white;
+  --text-act-title-default: #5caeda;
+  --border-dashed: #5caeda;
+  --border-selected: var(--blue-300);
+}
+
+/* GLOBAL ----------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+button {
+  cursor: pointer;
+  all: unset;
+}
+
+.heading {
+  color: var(--white);
+  letter-spacing: 0.15rem;
+  font-size: 4.5rem;
+  font-family: "Noto Serif";
+  font-weight: 500;
+}
+
+.main-btn {
+  font-family: "figtree";
+  font-weight: 500;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: var(--white);
+  border: 0.2rem solid var(--white);
+  font-size: 1.25rem;
+  letter-spacing: 0.2rem;
+  padding: 1.6rem 3.5rem;
+  transition: transform 0.3s ease;
+}
+
+.main-btn:hover {
+  background-color: var(--white);
+  color: var(--blue-500);
+  transform: scale(0.98);
+}
+
+/* HEADER ----------------------------------------------------------------------------- */
+
+.header {
+  cursor: pointer;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.03);
+  box-shadow: 0 0 0.03rem black;
+  max-width: 344rem;
+}
+
+.header-menu-btn {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  padding: 4rem 4.2rem;
+  gap: 1.5rem;
+  font-size: 2.2rem;
+}
+
+.header-menu-btn-text {
+  font-family: "Figtree";
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.35rem;
+  color: var(--white);
+}
+
+.header-menu-btn-icon {
+  height: 3.5rem;
+}
+
+/* SECTION ----------------------------------------------------------------------------- */
+
+.numbers-section {
+  max-width: 344rem;
+  position: relative;
+  z-index: 10;
+  padding: 2rem 0 2rem 0;
+  text-align: center;
+  background-color: var(--blue-500);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(43, 125, 173, 1) 25%,
+    var(--blue-700) 100%
+  );
+}
+
+.numbers-section > * {
+  position: relative;
+  z-index: 15;
+}
+
+.numbers-background {
+  overflow-y: hidden;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 50%;
+  width: 140%;
+  bottom: 0;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  padding-block: 5rem;
+  transform: translateX(-50%);
+}
+
+.numbers-tower-icon {
+  height: 100%;
+  width: var(--bg-towers-icon-width);
+}
+
+.numbers-btn {
+  margin-top: 10rem;
+}
+
+.numbers-title {
+  margin-top: 9rem;
+}
+
+/* ACTIVITIES ----------------------------------------------------------------------------- */
+
+.numbers-activities-wrapper {
+  position: relative;
+  z-index: 5;
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  pointer-events: none;
+}
+
+.numbers-act {
+  pointer-events: all;
+  cursor: pointer;
+  width: var(--act-box-size);
+  height: var(--act-box-size);
+  background: linear-gradient(to top right, var(--blue-700), var(--blue-600));
+  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.8rem;
+}
+
+.numbers-act-selected {
+  background: none;
+  cursor: auto;
+  width: calc(var(--act-box-size) + var(--act-box-selected-size));
+  background: linear-gradient(45deg, var(--blue-500) 0%, var(--blue-400) 25%, var(--blue-400) 75%, var(--blue-500) 100%);
+  border: var(--act-box-selected-size) solid var(--border-selected);
+  box-sizing: content-box;
+}
+
+.numbers-act-icon {
+  height: 7rem;
+  width: 7rem;
+}
+
+.numbers-act-title {
+  text-transform: uppercase;
+  font-family: "Figtree";
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 0.16rem;
+  color: var(--text-act-title-default);
+}
+
+.numbers-act-selected .numbers-act-title {
+  color: var(--white);
+}
+
+/* SLIDESHOW ----------------------------------------------------------------------------- */
+
+.numbers-slideshow {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-top: calc(-1 * (calc(var(--act-box-size) + var(--act-box-selected-size) + var(--act-box-selected-size)) / 2));
+  border-top: dashed 0.4rem var(--border-dashed);
+  box-sizing: content-box;
+  height: 60rem;
+}
+
+.numbers-slide-content {
+  width: 80%;
+  max-width: 150rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/img/student-leaving-school-after-classes.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.numbers-slide-content .slide-content-desc {
+  margin-top: 5rem;
+  max-width: 35%;
+  color: var(--white);
+}
+
+.numbers-slide-content .slide-desc-num {
+  font-family: "Figtree";
+  font-weight: 600;
+  font-size: 8.5rem;
+}
+
+.numbers-slide-content .slide-desc-text {
+  font-family: "Noto Serif";
+  font-weight: 500;
+  font-size: 3.5rem;
+}
+
+.numbers-slideshow .right-arrow-btn,
+.numbers-slideshow .left-arrow-btn {
+  margin-top: 5rem;
+}
+
+.right-arrow-btn,
+.left-arrow-btn {
+  padding: 1.2rem 1.2rem;
+}
+
+.left-arrow-btn:hover,
+.right-arrow-btn:hover {
+  transform: scale(0.9);
+}
+
+/* MEDIA QUERIES ----------------------------------------------------------------------------- */
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 59.375%;
+  }
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 53.125%;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 50%;
+  }
+}
+
