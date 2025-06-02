@@ -153,6 +153,7 @@ button {
 /* SECTION ----------------------------------------------------------------------------- */
 
 .numbers-section {
+  min-height: 100vh;
   max-width: 344rem;
   position: relative;
   z-index: 10;
@@ -264,7 +265,7 @@ button {
   margin-top: calc(-1 * (calc(var(--act-box-size) + var(--act-box-selected-size) + var(--act-box-selected-size)) / 2));
   border-top: dashed 0.4rem var(--border-dashed);
   box-sizing: content-box;
-  height: 60rem;
+  height: 100vh;
 }
 
 .numbers-slide-content {
